@@ -56,7 +56,17 @@ The standard UI has been replaced with https://github.com/justino/p2pool-ui-punc
 
 Donations towards further development:
 -------------------------
+<<<<<<< HEAD
     1HNeqi3pJRNvXybNX4FKzZgYJsdTSqJTbk
+=======
+Run P2Pool with the "--net litecoin" option.
+Run your miner program, connecting to 127.0.0.1 on port 9327.
+Forward port 9338 to the host running P2Pool.
+
+Litecoin's use of ports 9333 and 9332 conflicts with P2Pool running on
+the Bitcoin network. To avoid problems, add these lines to litecoin.conf
+and restart litecoind:
+>>>>>>> upstream/master
 
 Official wiki:
 -------------------------
