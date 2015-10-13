@@ -313,10 +313,10 @@ class NewShare(object):
                     from p2pool import p2p
                     raise p2p.PeerMisbehavingError('switch without enough history')
                 
-                # switch only valid if 60% of hashes in [self.net.CHAIN_LENGTH*9//10, self.net.CHAIN_LENGTH] for new version
+                # switch only valid if 85% of hashes in [self.net.CHAIN_LENGTH*9//10, self.net.CHAIN_LENGTH] for new version
                 counts = get_desired_version_counts(tracker,
                     tracker.get_nth_parent_hash(previous_share.hash, self.net.CHAIN_LENGTH*9//10), self.net.CHAIN_LENGTH//10)
-                if counts.get(self.VERSION, 0) < sum(counts.itervalues())*60//100:
+                if counts.get(self.VERSION, 0) < sum(counts.itervalues())*85//100:
                     raise p2p.PeerMisbehavingError('switch without enough hash power upgraded')
             else:
                 raise p2p.PeerMisbehavingError('''%s can't follow %s''' % (type(self).__name__, type(previous_share).__name__))
