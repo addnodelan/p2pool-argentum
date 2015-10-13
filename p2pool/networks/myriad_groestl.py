@@ -19,5 +19,5 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 3333
-BOOTSTRAP_ADDRS = 'birdspool.no-ip.org nz.p2pool.geek.nz mine4free.noip.me'.split(' ')
-VERSION_CHECK = lambda v: True
+BOOTSTRAP_ADDRS = 'birdspool.no-ip.org nz.nutty.one mine4free.noip.me'.split(' ')
+VERSION_CHECK = lambda v: None if 90216 <= v else 'Myriad version too old. Upgrade to 0.9.2.16 or newer!'
