@@ -20,9 +20,9 @@ POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('skeinhash').getPoWH
 BLOCK_PERIOD = 300 # s
 SYMBOL = 'MYR'
 CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'myriadcoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/myriadcoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.myriadcoin'), 'myriadcoin.conf')
-BLOCK_EXPLORER_URL_PREFIX = 'https://insight-myr.cryptap.us/block/'
-ADDRESS_EXPLORER_URL_PREFIX = 'https://insight-myr.cryptap.us/address/'
-TX_EXPLORER_URL_PREFIX = 'https://insight-myr.cryptap.us/tx/'
+BLOCK_EXPLORER_URL_PREFIX = 'https://cryptap.us/myr/explorer/block/'
+ADDRESS_EXPLORER_URL_PREFIX = 'https://cryptap.us/myr/explorer/address/'
+TX_EXPLORER_URL_PREFIX = 'https://cryptap.us/myr/explorer/tx/'
 SANE_TARGET_RANGE=(2**256//2**32//1000 - 1, 2**256//2**26 - 1)
 DUMB_SCRYPT_DIFF = 1
 DUST_THRESHOLD = 0.001e8
