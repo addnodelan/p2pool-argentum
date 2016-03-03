@@ -1,7 +1,7 @@
 *.pyc
 *.pyo
 *~
-
+*.sh
 /data/
 /litecoin_scrypt/build/
 /_trial_temp*
