@@ -357,6 +357,7 @@ def get_web_root(wb, datadir_path, bitcoind_getinfo_var, stop_event=variable.Eve
         block_explorer_url_prefix=node.net.PARENT.BLOCK_EXPLORER_URL_PREFIX,
         address_explorer_url_prefix=node.net.PARENT.ADDRESS_EXPLORER_URL_PREFIX,
         tx_explorer_url_prefix=node.net.PARENT.TX_EXPLORER_URL_PREFIX,
+		algorithm=node.net.ALGORITHM,
     )))
     new_root.putChild('version', WebInterface(lambda: p2pool.__version__))
     

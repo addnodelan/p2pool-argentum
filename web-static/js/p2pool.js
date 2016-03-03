@@ -354,11 +354,17 @@ $(document).on('update_currency', function(e, eventInfo) {
         currency = $('<i/>').attr('class', 'fa fa-btc fa-fw');
     }
     else {
-        currency = $('<span/>').append(currency_info.symbol);
+		currency = $('<span/>').append(currency_info.symbol);
     }
 
     if (set_currency_symbol) {
-        $('#currency').append('(').append(currency).append(')');
+		if(currency_info.algorithm != '') {
+			$('#currency').append('(').append(currency).append('-').append(currency_info.algorithm).append(')');
+		}
+		else {
+			$('#currency').append('(').append(currency).append(')');
+		} 
+        
         set_currency_symbol = false;
     }
 });
