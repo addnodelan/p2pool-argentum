@@ -14,11 +14,11 @@ TARGET_LOOKBEHIND = 200 # shares
 SPREAD = 60 # blocks
 IDENTIFIER = 'e7df369093939026'.decode('hex')
 PREFIX = '6df5bd7eda3cbe60'.decode('hex')
-P2P_PORT = 15577
+P2P_PORT = 15533
 MIN_TARGET = 0
 MAX_TARGET = 2**256//10000 - 1
 PERSIST = False
-WORKER_PORT = 15578
+WORKER_PORT = 15534
 BOOTSTRAP_ADDRS = 'nz.nutty.one'.split(' ')
 VERSION_CHECK = lambda v: None if 90216 <= v else 'Myriad version too old. Upgrade to 0.9.2.16 or newer!'
 ALGORITHM = 'Yescrypt'
