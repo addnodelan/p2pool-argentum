@@ -30,6 +30,7 @@ Replace {network_name} with the following depending on the algorithm:
 * Myr-Groestl - myriad_groestl
 * Skein - myriad_skein
 * Qubit - myriad_qubit
+* Yescrypt - myriad_yescrypt
 
 Ensure your myriad daemon is configured with the same algorithm (via the algo= option in myriadcoin.conf).
 
@@ -38,6 +39,7 @@ To make your node accessible from the internet, open the following ports on your
 * Myr-Groestl: Worker Port = 5545; Peer-2-Peer Port = 5544
 * Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
 * Qubit: Worker Port = 5567; Peer-2-Peer Port = 5566
+* Yescrypt: Worker Port = 5534; Peer-2-Peer Port = 5533
 
 Run for additional options:
 
