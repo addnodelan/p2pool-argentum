@@ -19,6 +19,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 5589
-BOOTSTRAP_ADDRS = 'birdspool.no-ip.org nz.nutty.one'.split(' ')
+BOOTSTRAP_ADDRS = 'nz.nutty.one'.split(' ')
 VERSION_CHECK = lambda v: None if 90216 <= v else 'Myriad version too old. Upgrade to 0.9.2.16 or newer!'
 ALGORITHM = 'Skein'
