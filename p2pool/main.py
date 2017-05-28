@@ -470,7 +470,7 @@ def run():
         type=str, action='append', default=[], dest='merged_urls')
     parser.add_argument('--coinbtext',
         help='append this text to the coinbase (default: p2pool)',
-        type=str, action='append', default='p2pool', dest='coinb_texts')
+        type=str, action='append', default=['p2pool'], dest='coinb_texts')
     parser.add_argument('--give-author', metavar='DONATION_PERCENTAGE',
         help='donate this percentage of work towards the development of p2pool (default: 1.0)',
         type=float, action='store', default=1.0, dest='donation_percentage')
