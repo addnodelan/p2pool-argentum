@@ -1,43 +1,49 @@
 About
 -------------------------
-This is a Myriad customised version of P2Pool, forked directly from https://github.com/forrestv/p2pool.
+This is an Argentum customised version of P2Pool, forked directly from https://github.com/forrestv/p2pool.
 
-All 3 of Myriad's non-merge-mined algorithms (myr-groestl, skein, qubit) are supported and preconfigured, and Python modules for each are provided.
+All 6 Argentum's algorithms (myr-groestl, argon2d, yescrypt, scrypt, sha256, lyra2re2) are supported and preconfigured, and Python modules for each are provided. No AUXPOW on Scrypt or SHA256 with P2Pool.
 
 Requirements & Setup:
 -------------------------
 Generic:
-* Myriadcoin >=0.9.2.16 (https://github.com/myriadcoin/myriadcoin/releases)
+* Argentum >=4.14.3 (https://github.com/argentumproject/argentum/releases)
 * Python >=2.6 (https://www.python.org/downloads/)
 * Zope.Interface >=3.8(https://pypi.python.org/pypi/zope.interface)
 * Twisted >=10.0.0 (https://twistedmatrix.com/trac/wiki/Downloads)
 * python-argparse (for Python =2.6)
 
-To install the hash modules, go into each sub-folder within /modules and run
+To install the hash modules, go into each sub-folder within /hash_modules and run
 
-    su python setup.py install
+    sudo python setup.py install
 
 	
 Running P2Pool:
 -------------------------
-To use P2Pool, you must be running your own local myriadcoin daemon. For standard
+To use P2Pool, you must be running your own local argentum daemon. For standard
 configurations, using P2Pool should be as simple as:
 
     python run_p2pool.py --net {network_name}
 
 Replace {network_name} with the following depending on the algorithm:
 
-* Myr-Groestl - myriad_groestl
-* Skein - myriad_skein
-* Yescrypt - myriad_yescrypt
+* Argon2d - argentum_argon2d
+* Myr-Groestl - argentum_groestl
+* Yescrypt - argentum_yescrypt
+* Scrypt - argenum_scrypt
+* Sha256d - argentum_sha256
+* Lyra2re2 - argentum_lyra2re2
 
-Ensure your myriad daemon is configured with the same algorithm (via the algo= option in myriadcoin.conf).
+Ensure your argentum daemon is configured with the same algorithm (via the algo= option in argentum.conf).
 
 To make your node accessible from the internet, open the following ports on your router (both the worker port and peer-2-peer port please!):
 
-* Myr-Groestl: Worker Port = 5545; Peer-2-Peer Port = 5544
-* Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
-* Yescrypt: Worker Port = 5534; Peer-2-Peer Port = 5533
+* Argon2d: Worker Port = 9552; Peer-2-Peer Port = 13582
+* Myr-Groestl: Worker Port = 9553; Peer-2-Peer Port = 13583
+* Yescrypt: Worker Port = 9554; Peer-2-Peer Port = 13584
+* Scrypt: Worker Port = 9555; Peer-2-Peer Port = 13585
+* Sha256: Worker Port = 9556; Peer-2-Peer Port = 13586
+* Lyra2re2: Worker Port = 9557; Peer-2-Peer Port = 13587
 
 Run for additional options:
 

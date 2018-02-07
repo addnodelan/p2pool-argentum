@@ -451,7 +451,7 @@ def run():
         help='generate payouts to this address (default: <address requested from bitcoind>), or (dynamic)',
         type=str, action='store', default=None, dest='address')
     parser.add_argument('-i', '--numaddresses',
-        help='number of bitcoin auto-generated addresses to maintain for getwork dynamic address allocation',
+        help='number of argentum auto-generated addresses to maintain for getwork dynamic address allocation',
         type=int, action='store', default=2, dest='numaddresses')
     parser.add_argument('-t', '--timeaddresses',
         help='seconds between acquisition of new address and removal of single old (default: 2 days or 172800s)',
@@ -512,7 +512,7 @@ def run():
         help='listen on PORT on interface with ADDR for RPC connections from miners (default: all interfaces, %s)' % ', '.join('%s:%i' % (name, net.WORKER_PORT) for name, net in sorted(realnets.items())),
         type=str, action='store', default=None, dest='worker_endpoint')
     worker_group.add_argument('-f', '--fee', metavar='FEE_PERCENTAGE',
-        help='''charge workers mining to their own bitcoin address (by setting their miner's username to a bitcoin address) this percentage fee to mine on your p2pool instance. Amount displayed at http://127.0.0.1:WORKER_PORT/fee (default: 0)''',
+        help='''charge workers mining to their own argentum address (by setting their miner's username to a argentum address) this percentage fee to mine on your p2pool instance. Amount displayed at http://127.0.0.1:WORKER_PORT/fee (default: 0)''',
         type=float, action='store', default=0, dest='worker_fee')
     
     bitcoind_group = parser.add_argument_group('bitcoind interface')
@@ -557,7 +557,7 @@ def run():
     if args.bitcoind_rpc_password is None:
         conf_path = args.bitcoind_config_path or net.PARENT.CONF_FILE_FUNC()
         if not os.path.exists(conf_path):
-            parser.error('''Bitcoin configuration file not found. Manually enter your RPC password.\r\n'''
+            parser.error('''Argentum configuration file not found. Manually enter your RPC password.\r\n'''
                 '''If you actually haven't created a configuration file, you should create one at %s with the text:\r\n'''
                 '''\r\n'''
                 '''server=1\r\n'''
@@ -584,7 +584,7 @@ def run():
         if 'rpcssl' in contents and contents['rpcssl'] != '0':
             args.bitcoind_rpc_ssl = True
         if args.bitcoind_rpc_password is None:
-            parser.error('''Bitcoin configuration file didn't contain an rpcpassword= line! Add one!''')
+            parser.error('''Argentum configuration file didn't contain an rpcpassword= line! Add one!''')
     
     if args.bitcoind_rpc_username is None:
         args.bitcoind_rpc_username = ''
