@@ -17,7 +17,7 @@ PREFIX = '1ac34e25529a6ad9'.decode('hex')
 P2P_PORT = 13582
 MIN_TARGET = 0
 MAX_TARGET = 2**256//10000 - 1
-PERSIST = True
+PERSIST = False
 WORKER_PORT = 9552
 BOOTSTRAP_ADDRS = '45.76.112.155 45.76.240.8'.split(' ')
 VERSION_CHECK = lambda v: None if 1090000 <= v else 'Argentum version too old. Upgrade to 4.14.3 or newer!'

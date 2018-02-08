@@ -7,8 +7,8 @@ from .. import data, helper
 from p2pool.util import pack
 
 
-P2P_PREFIX = 'fbc1b8dc'.decode('hex')
-P2P_PORT = 13580
+P2P_PREFIX = 'fcc1b8dc'.decode('hex')
+P2P_PORT = 13589
 ADDRESS_VERSION = 23
 RPC_PORT = 13581
 RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
@@ -17,7 +17,7 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
         ))
 SUBSIDY_FUNC = lambda height: 3*100000000
 POW_FUNC = data.hash256
-BLOCK_PERIOD = 270 # s
+BLOCK_PERIOD = 45 # s
 SYMBOL = 'ARG'
 CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Argentum') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/Argentum/') if platform.system() == 'Darwin' else os.path.expanduser('~/.argentum'), 'argentum.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'https://chainz.cryptoid.info/arg/block.dws?'
