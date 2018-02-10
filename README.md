@@ -2,7 +2,11 @@ About
 -------------------------
 This is an Argentum customised version of P2Pool, forked directly from https://github.com/forrestv/p2pool.
 
-All 6 Argentum's algorithms (myr-groestl, argon2d, yescrypt, scrypt, sha256, lyra2re2) are supported and preconfigured, and Python modules for each are provided. No AUXPOW on Scrypt or SHA256 with P2Pool.
+All 6 Argentum's algorithms (myr-groestl, argon2d, yescrypt, scrypt, sha256, lyra2re2) are supported and preconfigured, and Python modules for each are provided.
+
+### For Lyra2rev2
+
+	git checkout lyra2rev2
 
 Requirements & Setup:
 -------------------------
