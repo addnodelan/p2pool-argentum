@@ -19,6 +19,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//10000 - 1
 PERSIST = True
 WORKER_PORT = 9554
-BOOTSTRAP_ADDRS = '45.76.112.155 45.76.240.8'.split(' ')
+BOOTSTRAP_ADDRS = '45.76.112.155'.split(' ')
 VERSION_CHECK = lambda v: None if 1090000 <= v else 'Argentum version too old. Upgrade to 4.14.3 or newer!'
 ALGORITHM = 'Yescrypt'
