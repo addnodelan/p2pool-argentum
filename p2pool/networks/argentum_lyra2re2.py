@@ -13,6 +13,6 @@ MIN_TARGET = 4
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 9557
-BOOTSTRAP_ADDRS = '45.76.112.155 45.76.240.8'.split(' ')
+BOOTSTRAP_ADDRS = '45.76.240.8'.split(' ')
 VERSION_CHECK = lambda v: None if 1090000 <= v else 'Argentum version too old. Upgrade to 4.14.3 or newer!'
 ALGORITHM = 'Lyra2re2'
